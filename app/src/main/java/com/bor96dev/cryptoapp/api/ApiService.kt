@@ -2,7 +2,7 @@ package com.bor96dev.cryptoapp.api
 
 import com.bor96dev.cryptoapp.pojo.CoinInfoListOfData
 import com.bor96dev.cryptoapp.pojo.CoinPriceInfoRawData
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 
