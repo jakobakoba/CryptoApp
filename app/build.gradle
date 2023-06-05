@@ -34,10 +34,11 @@ android {
 }
 
 dependencies {
-    def lifecycle_version = "2.6.1"
-    def arch_version = "2.2.0"
 
-    kapt("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
+
+    def lifecycle_version = "2.6.1"
+
+    kapt("androidx.lifecycle-common:lifecycle-compiler:$lifecycle_version")
 
     //ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
@@ -48,7 +49,6 @@ dependencies {
 
     //RxJava
     implementation "io.reactivex.rxjava3:rxjava:3.1.6"
-
 
 
     //Retrofit2 RxJava
@@ -65,12 +65,13 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
 
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
 
 
-
-    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
