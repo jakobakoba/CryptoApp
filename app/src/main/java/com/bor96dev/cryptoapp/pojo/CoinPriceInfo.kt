@@ -1,13 +1,14 @@
 package com.bor96dev.cryptoapp.pojo
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
 
 
-
-
-data class CoinPriceInfo (
+@Entity(tableName = "full_price_list")
+data class CoinPriceInfo(
     @SerializedName("TYPE")
     @Expose
     private val type: String? = null,
@@ -16,6 +17,7 @@ data class CoinPriceInfo (
     @Expose
     private val market: String? = null,
 
+    @PrimaryKey
     @SerializedName("FROMSYMBOL")
     @Expose
     private val fromsymbol: String? = null,
@@ -198,5 +200,5 @@ data class CoinPriceInfo (
 
     @SerializedName("IMAGEURL")
     @Expose
-    private val imageurl: String? = null
-    )
+    private val imageurl: String? = null,
+)
